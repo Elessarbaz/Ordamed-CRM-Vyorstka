@@ -1,0 +1,221 @@
+@charset "UTF-8";
+/* -------------------НАЧАЛО----------------
+                   Общие стили
+--------------------------------------------*/
+body {
+  background-color: #eeeeee;
+  font-size: 16px;
+  font-family: Arial, sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold; }
+
+a:hover {
+  text-decoration: none; }
+
+i.blue {
+  color: #1c3a99; }
+i.red {
+  color: red; }
+i.green {
+  color: green; }
+
+/* -------------------КОНЕЦ----------------
+                   Общие стили
+--------------------------------------------*/
+/* -------------------НАЧАЛО----------------
+Общий контейнер для сайдбара и для контента
+--------------------------------------------*/
+.main-container {
+  display: flex; }
+
+/* -------------------КОНЕЦ-----------------
+Общий контейнер для сайдбара и для контента
+--------------------------------------------*/
+/* -------------------НАЧАЛО-----------------
+                    Сайдбар
+--------------------------------------------*/
+.sidebar {
+  background-color: #1c3a99;
+  flex: 0 1 250px; }
+  .sidebar .logo {
+    background-color: #0073e6;
+    padding: 25px; }
+  .sidebar li {
+    font-size: 14px;
+    font-weight: bold; }
+    .sidebar li a {
+      color: #b8c9ff;
+      padding: 15px;
+      background-color: #3756b9; }
+      .sidebar li a span {
+        margin-right: 10px; }
+  .sidebar li.uk-active {
+    position: relative; }
+    .sidebar li.uk-active::after {
+      content: "";
+      position: absolute;
+      margin-top: -10px;
+      right: 0;
+      top: 50%;
+      width: 0;
+      height: 0;
+      border-top: 10px solid transparent;
+      border-right: 10px solid #eee;
+      border-bottom: 10px solid transparent; }
+    .sidebar li.uk-active a {
+      color: white;
+      background-color: #5977d6; }
+
+/* -------------------КОНЕЦ-----------------
+                    Сайдбар
+--------------------------------------------*/
+/* -------------------НАЧАЛО-----------------
+                Контейнер контента
+--------------------------------------------*/
+.content-container {
+  flex: 1 1 auto; }
+
+.upper-panel {
+  padding: 20px;
+  background: #fff;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2); }
+  .upper-panel input[type=search] {
+    border-radius: 5px;
+    border: 1px #eee solid;
+    height: 35px;
+    padding: 0 5px; }
+    .upper-panel input[type=search]:focus {
+      outline: none; }
+  .upper-panel .styled-select {
+    display: inline-block; }
+    .upper-panel .styled-select select {
+      color: #0073e6;
+      background: transparent;
+      padding: 5px;
+      font-size: 16px;
+      line-height: 1;
+      border: 0;
+      border-radius: 0;
+      height: 34px; }
+      .upper-panel .styled-select select:focus {
+        outline-color: #ddd; }
+  .upper-panel .profile-column {
+    text-align: right; }
+    .upper-panel .profile-column .avatar {
+      border-radius: 10px;
+      max-width: 40px;
+      max-height: 40px; }
+
+.grid-container {
+  padding: 4px; }
+
+.grid {
+  overflow: hidden;
+  /* clear fix */ }
+  .grid * {
+    box-sizing: border-box; }
+  .grid:after {
+    content: '';
+    display: block;
+    clear: both; }
+
+.grid-item {
+  box-sizing: border-box;
+  float: left;
+  background-clip: content-box;
+  width: 49.5%; }
+  .grid-item:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    cursor: move; }
+  .grid-item.is-dragging, .grid-item.is-positioning-post-drag {
+    z-index: 2; }
+  .grid-item > div {
+    height: 340px;
+    background: white;
+    margin: 8px !important;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); }
+
+.packery-drop-placeholder {
+  outline: 2px dashed rgba(0, 0, 0, 0.1);
+  outline-offset: -6px;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: transform 0.2s; }
+
+.grid-item h4 {
+  color: #555;
+  margin-top: 0; }
+.grid-item hr {
+  margin: 10px -15px; }
+.grid-item p {
+  font-size: 14px;
+  margin: 0; }
+.grid-item [class*=uk-grid] > * {
+  padding: 10px 15px;
+  position: relative; }
+.grid-item .uk-icon-ellipsis-v {
+  position: absolute;
+  right: 5px;
+  top: 5px; }
+.grid-item ul.contacts {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+  .grid-item ul.contacts li {
+    padding: 5px; }
+    .grid-item ul.contacts li:hover {
+      background-color: #eee; }
+
+.uk-icon-button {
+  cursor: pointer; }
+
+.uk-dropdown {
+  margin-top: -20px;
+  position: relative;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.07);
+  line-height: 1.2;
+  font-family: Arial, sans-serif;
+  padding-left: 0;
+  padding-right: 0; }
+  .uk-dropdown:after, .uk-dropdown:before {
+    bottom: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none; }
+  .uk-dropdown:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #fff;
+    border-width: 10px;
+    margin-left: -10px; }
+  .uk-dropdown:before {
+    border-color: rgba(204, 204, 204, 0);
+    border-bottom-color: #ccc;
+    border-width: 11px;
+    margin-left: -11px; }
+  .uk-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left; }
+    .uk-dropdown ul a {
+      color: #333333;
+      display: block;
+      padding: 5px; }
+      .uk-dropdown ul a:hover {
+        background-color: #eeeeee; }
+      .uk-dropdown ul a i {
+        margin-right: 10px; }
+
+/* -------------------КОНЕЦ------------------
+                Контейнер контента
+--------------------------------------------*/
+
+/*# sourceMappingURL=styles.css.map */

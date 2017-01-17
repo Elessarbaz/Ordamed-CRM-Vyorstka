@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Главная</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/uikit.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- НАЧАЛО Общий контейнер для сайдбара и для контента -->
+  <div class="main-container">
+
+    <!-- НАЧАЛО Сайдбар -->
+    <div class="sidebar">
+      <div class="logo">
+        <img src="images/logo.png" alt="Лого">
+      </div>
+      <ul class="uk-nav" data-uk-nav>
+        <li class="uk-active">
+          <a href="#"><span class="uk-icon-home uk-icon-small"></span> Главная</a>
+        </li>
+        <li>
+          <a href="#"><span class="uk-icon-users uk-icon-small"></span> Контакты</a>
+        </li>
+        <li>
+          <a href="#"><span class="uk-icon-calendar uk-icon-small"></span> Задачи</a>
+        </li>
+        <li>
+          <a href="#"><span class="uk-icon-shopping-cart uk-icon-small"></span> Продукты</a>
+        </li>
+        <li>
+          <a href="#"><span class="uk-icon-list uk-icon-small"></span> Отчёты</a>
+        </li>
+      </ul>
+    </div>
+    <!-- КОНЕЦ Сайдбар -->
+
+    <!-- НАЧАЛО Контейнер контента -->
+    <div class="content-container">
+      <div class="upper-panel uk-grid uk-margin-remove">
+
+        <form action="" class="uk-width-medium-1-2">
+          <label for="search_in">Поиск в</label>
+          <div class="styled-select">
+            <select id="search_in">
+              <option>Контактах</option>
+              <option>Задачах</option>
+              <option>Продуктах</option>
+            </select>
+          </div>
+          <input type="search" placeholder="Ваш запрос..">
+          <a href="" class="uk-icon-button uk-icon-search"></a>
+        </form>
+
+        <div class="uk-width-medium-1-2 profile-column">
+          <a href="" class="uk-icon-button uk-icon-bell"></a>
+          <a href="#"><img class="avatar" src="images/avatar.jpg" alt="Аватар"></a>
+          <a href="#">Юрий Ельцов</a>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <div class="grid">
+          <div class="grid-item">
+            <div class="uk-grid uk-grid-collapse uk-grid-divider">
+              <div class="uk-width-medium-1-2">
+                <h4>Контакт в обработке</h4>
+                <div class="uk-icon-button uk-icon-ellipsis-v" data-uk-dropdown="{mode:'click', pos:'bottom-center'}">
+
+                  <!-- This is the dropdown -->
+                  <div class="uk-dropdown uk-dropdown-small">
+                    <ul>
+                      <li><a href=""><i class="uk-icon-plus blue"></i> Добавить</a></li>
+                      <li><a href=""><i class="uk-icon-edit"></i> Редактировать</a></li>
+                      <li><a href=""><i class="uk-icon-close red"></i> Удалить</a></li>
+                    </ul>
+                  </div>
+
+
+                </div>
+                <p>Ордамед</p>
+                <p>+7 701 123 45 67</p>
+                <hr>
+                <h4>Контакты</h4>
+                <ul class="contacts">
+                  <li>Ордамед <i class="uk-icon-check-circle-o green uk-float-right"></i></li>
+                  <li>Лабтроник</li>
+                  <li>Медоника</li>
+                  <li>ОЦА</li>
+                  <li>Сёрдикея</li>
+                </ul>
+              </div>
+              <div class="uk-width-medium-1-2">
+                <h4>Сделки</h4>
+                <a href="" class="uk-icon-button uk-icon-ellipsis-v"></a>
+
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div>
+
+            </div>
+          </div>
+          <div class="grid-item">
+            <div>
+
+            </div>
+          </div>
+          <div class="grid-item">
+            <div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- КОНЕЦ Контейнер контента -->
+
+  </div>
+  <!-- КОНЕЦ Общий контейнер для сайдбара и для контента -->
+
+  <script src="js/packery.pkgd.min.js"></script>
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/uikit.min.js"></script>
+  <script src="js/packery.pkgd.min.js"></script>
+  <script src="js/draggabilly.pkgd.min.js"></script>
+  <script>
+    $( window ).on( "load", function() {
+      // external js: packery.pkgd.js, draggabilly.pkgd.js
+
+      var $grid = $('.grid').packery({
+        itemSelector: '.grid-item'
+      });
+
+// make all grid-items draggable
+      $grid.find('.grid-item').each( function( i, gridItem ) {
+        var draggie = new Draggabilly( gridItem );
+        // bind drag events to Packery
+        $grid.packery( 'bindDraggabillyEvents', draggie );
+      });
+
+    });
+  </script>
+</body>
+</html>

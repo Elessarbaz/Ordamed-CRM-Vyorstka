@@ -1,0 +1,304 @@
+/* -------------------НАЧАЛО----------------
+                   Общие стили
+--------------------------------------------*/
+$main-color-dark: #1c3a99;
+
+body {
+  background-color: #eeeeee;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+i {
+  &.blue {
+   color: $main-color-dark;
+  }
+  &.red {
+    color: red;
+  }
+  &.green {
+    color: green;
+  }
+}
+/* -------------------КОНЕЦ----------------
+                   Общие стили
+--------------------------------------------*/
+
+/* -------------------НАЧАЛО----------------
+Общий контейнер для сайдбара и для контента
+--------------------------------------------*/
+.main-container {
+  display: flex;
+}
+/* -------------------КОНЕЦ-----------------
+Общий контейнер для сайдбара и для контента
+--------------------------------------------*/
+
+/* -------------------НАЧАЛО-----------------
+                    Сайдбар
+--------------------------------------------*/
+.sidebar {
+  background-color: $main-color-dark;
+  flex: 0 1 250px;
+
+  .logo {
+    background-color: #0073e6;
+    padding: 25px;
+  }
+
+  li {
+    font-size: 14px;
+    font-weight: bold;
+    a {
+      color: #b8c9ff;
+      padding: 15px;
+      background-color: #3756b9;
+
+      span {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  li.uk-active {
+    position: relative;
+
+    // Треугольник активного меню
+    &::after {
+      content:"";
+      position: absolute;
+      margin-top: -10px;
+      right: 0;
+      top: 50%;
+      width: 0;
+      height: 0;
+      border-top: 10px solid transparent;
+      border-right: 10px solid #eee;
+      border-bottom: 10px solid transparent;
+    }
+
+    a {
+      color: white;
+      background-color: #5977d6;
+    }
+  }
+}
+/* -------------------КОНЕЦ-----------------
+                    Сайдбар
+--------------------------------------------*/
+
+/* -------------------НАЧАЛО-----------------
+                Контейнер контента
+--------------------------------------------*/
+
+//сам контейнер
+.content-container {
+  flex: 1 1 auto;
+}
+
+//панель поиска и профиля на верху
+.upper-panel {
+  padding: 20px;
+  background: #fff;
+  box-shadow:  5px 0 15px rgba(0,0,0,.2);
+
+  input[type=search] {
+    border-radius: 5px;
+    border: 1px #eee solid;
+    height: 35px;
+    padding: 0 5px;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .styled-select {
+    display: inline-block;
+
+    select {
+      color: #0073e6;
+      background: transparent;
+      padding: 5px;
+      font-size: 16px;
+      line-height: 1;
+      border: 0;
+      border-radius: 0;
+      height: 34px;
+      &:focus {
+        outline-color: #ddd;
+      }
+    }
+  }
+
+  .profile-column {
+    text-align: right;
+
+    .avatar {
+      border-radius: 10px;
+      max-width: 40px;
+      max-height: 40px;
+    }
+  }
+
+}
+
+//НАЧАЛО перемещаемые виджеты общие стили
+.grid-container {
+  padding: 4px;
+}
+.grid {
+  overflow: hidden;
+  & * {
+    box-sizing: border-box;
+  }
+  /* clear fix */
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+.grid-item {
+  box-sizing: border-box;
+  float: left;
+  background-clip: content-box;
+  width: 49.5%;
+
+  &:hover {
+    border-color: hsla(0, 0%, 100%, 0.5);
+    cursor: move;
+  }
+  &.is-dragging,
+  &.is-positioning-post-drag {
+    z-index: 2;
+  }
+
+  & > div {
+    height: 340px;
+    background: white;
+    margin: 8px !important;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0,0,0,.2);
+  }
+}
+.packery-drop-placeholder {
+  outline: 2px dashed rgba(0, 0, 0,.1);
+  outline-offset: -6px;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+}
+//КОНЕЦ перемещаемые виджеты общие стили
+
+//НАЧАЛО перемещаемые виджеты содержание
+.grid-item {
+  h4 {
+    color: #555;
+    margin-top: 0;
+  }
+  hr {
+    margin: 10px -15px;
+  }
+  p {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  [class*=uk-grid] >* {
+    padding: 10px 15px;
+    position: relative;
+  }
+
+  .uk-icon-ellipsis-v {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+  }
+
+  ul.contacts {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      padding: 5px;
+      &:hover {
+        background-color: #eee;
+      }
+    }
+  }
+}
+
+
+//кнопка выпадашки
+.uk-icon-button {
+  cursor: pointer;
+}
+//выпадашка
+.uk-dropdown {
+  margin-top: -20px;
+  position: relative;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow:  0 0 15px rgba(0,0,0,.07);
+  line-height: 1.2;
+  font-family: Arial, sans-serif;
+  padding-left: 0;
+  padding-right: 0;
+
+  &:after,
+  &:before {
+    bottom: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+  &:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #fff;
+    border-width: 10px;
+    margin-left: -10px;
+  }
+  &:before {
+    border-color: rgba(204, 204, 204, 0);
+    border-bottom-color: #ccc;
+    border-width: 11px;
+    margin-left: -11px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+
+    a {
+      color: #333333;
+      display: block;
+      padding: 5px;
+      &:hover {
+        background-color: #eeeeee;
+      }
+      i {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+//КОНЕЦ перемещаемые виджеты содержание
+
+/* -------------------КОНЕЦ------------------
+                Контейнер контента
+--------------------------------------------*/
+
