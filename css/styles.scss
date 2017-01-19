@@ -33,6 +33,28 @@ ul {
   padding: 0;
 }
 
+// переписываем стили uikit для form
+.uk-form input {
+  color: white;
+}
+
+//переписываем стили uikit для uk-subnav
+.uk-subnav {
+  margin: 0;
+  display: block;
+  background-color: #f3f3f3;
+  li {
+    float: none;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    a {
+      background-color: white;
+      padding: 5px 10px;
+    }
+  }
+}
+
 // стилизация select-options
 .styled-select {
   display: inline-block;
@@ -148,11 +170,7 @@ ul {
                     Сайдбар
 --------------------------------------------*/
 
-/* -------------------НАЧАЛО-----------------
-                Контейнер контента
---------------------------------------------*/
-
-//сам контейнер
+//Контейнер контента
 .content-container {
   flex: 1 1 auto;
 }
@@ -185,7 +203,10 @@ ul {
 
 }
 
-//НАЧАЛО перемещаемые виджеты общие стили
+/* -------------------НАЧАЛО-----------------
+       перемещаемые виджеты общие стили
+--------------------------------------------*/
+
 .grid-container {
   overflow: hidden;
   padding: 4px;
@@ -281,9 +302,14 @@ ul {
   -webkit-transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
 }
-//КОНЕЦ перемещаемые виджеты общие стили
+/* -------------------КОНЕЦ-----------------
+       перемещаемые виджеты общие стили
+--------------------------------------------*/
 
-//НАЧАЛО перемещаемые виджеты содержание
+/* -------------------НАЧАЛО-----------------
+       перемещаемые виджеты содержание
+--------------------------------------------*/
+
 //выпадашка
 .uk-dropdown {
   margin-top: -20px;
@@ -358,9 +384,46 @@ ul {
   }
 }
 
-//КОНЕЦ перемещаемые виджеты содержание
+// НАЧАЛО виджет с воронкой
+.funnel-container {
+  padding: 10px;
+  font-size: 12px;
+  text-align: justify;
+  display: flex;
+  height: 100%;
+  & > div {
+    flex: 1 1 200px;
+  }
+  .funnel-legend {
+    margin-left: 10px;
+    ul {
+      li {
+        padding-left: 5px;
+        border-left: 4px solid #39f;
+      }
+      li:nth-child(even) {
+        background-color: #f3f3f3;
+      }
+      li:nth-child(2) {
+        border-color: #ff9c23;
+      }
+      li:nth-child(3) {
+        border-color: #07bc1f;
+      }
+      li:nth-child(4) {
+        border-color: #bc2e25;
+      }
+      li:nth-child(5) {
+        border-color: #bc3993;
+      }
+    }
+  }
+  #funnel {
+  }
+}
+// КОНЕЦ виджет с воронкой
 
-/* -------------------КОНЕЦ------------------
-                Контейнер контента
+/* -------------------КОНЕЦ-----------------
+       перемещаемые виджеты содержание
 --------------------------------------------*/
 

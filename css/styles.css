@@ -25,6 +25,22 @@ ul {
   margin: 0;
   padding: 0; }
 
+.uk-form input {
+  color: white; }
+
+.uk-subnav {
+  margin: 0;
+  display: block;
+  background-color: #f3f3f3; }
+  .uk-subnav li {
+    float: none;
+    display: inline-block;
+    padding: 0;
+    margin: 0; }
+    .uk-subnav li a {
+      background-color: white;
+      padding: 5px 10px; }
+
 .styled-select {
   display: inline-block; }
   .styled-select select {
@@ -110,9 +126,6 @@ ul {
 /* -------------------КОНЕЦ-----------------
                     Сайдбар
 --------------------------------------------*/
-/* -------------------НАЧАЛО-----------------
-                Контейнер контента
---------------------------------------------*/
 .content-container {
   flex: 1 1 auto; }
 
@@ -133,6 +146,9 @@ ul {
       max-width: 40px;
       max-height: 40px; }
 
+/* -------------------НАЧАЛО-----------------
+       перемещаемые виджеты общие стили
+--------------------------------------------*/
 .grid-container {
   overflow: hidden;
   padding: 4px; }
@@ -200,6 +216,12 @@ ul {
   -webkit-transition: -webkit-transform 0.2s;
   transition: transform 0.2s; }
 
+/* -------------------КОНЕЦ-----------------
+       перемещаемые виджеты общие стили
+--------------------------------------------*/
+/* -------------------НАЧАЛО-----------------
+       перемещаемые виджеты содержание
+--------------------------------------------*/
 .uk-dropdown {
   margin-top: -20px;
   position: relative;
@@ -252,8 +274,32 @@ ul {
 .uk-table.staff-activity td {
   vertical-align: middle; }
 
-/* -------------------КОНЕЦ------------------
-                Контейнер контента
+.funnel-container {
+  padding: 10px;
+  font-size: 12px;
+  text-align: justify;
+  display: flex;
+  height: 100%; }
+  .funnel-container > div {
+    flex: 1 1 200px; }
+  .funnel-container .funnel-legend {
+    margin-left: 10px; }
+    .funnel-container .funnel-legend ul li {
+      padding-left: 5px;
+      border-left: 4px solid #39f; }
+    .funnel-container .funnel-legend ul li:nth-child(even) {
+      background-color: #f3f3f3; }
+    .funnel-container .funnel-legend ul li:nth-child(2) {
+      border-color: #ff9c23; }
+    .funnel-container .funnel-legend ul li:nth-child(3) {
+      border-color: #07bc1f; }
+    .funnel-container .funnel-legend ul li:nth-child(4) {
+      border-color: #bc2e25; }
+    .funnel-container .funnel-legend ul li:nth-child(5) {
+      border-color: #bc3993; }
+
+/* -------------------КОНЕЦ-----------------
+       перемещаемые виджеты содержание
 --------------------------------------------*/
 
 /*# sourceMappingURL=styles.css.map */

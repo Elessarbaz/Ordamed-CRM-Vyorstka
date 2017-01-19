@@ -292,7 +292,7 @@
                   </div>
                 </div>
                 <!-- НАЧАЛО switcher-->
-                <ul class="uk-subnav uk-subnav-pill uk-margin-remove" data-uk-switcher="{connect:'#deals-switcher', animation: 'scale'}">
+                <ul class="uk-subnav uk-subnav-pill" data-uk-switcher="{connect:'#deals-switcher', animation: 'scale'}">
                   <li class="uk-active" aria-expanded="true"><a href="">Сделка 1</a></li>
                   <li aria-expanded="false" class=""><a href="">Сделка 2</a></li>
                   <li aria-expanded="false" class=""><a href="">Сделка 3</a></li>
@@ -303,100 +303,20 @@
                   <div class="scrollable-content">
                     <ul id="deals-switcher" class="uk-switcher">
                       <li>
-                        <table class="uk-table uk-table-striped">
-                          <tbody>
-                          <tr>
-                            <td><div class="styled-select">
-                              <select>
-                                <option>Приостановлена</option>
-                                <option>Активна</option>
-                                <option>Завершена</option>
-                              </select>
-                            </div></td>
-                            <td>
-                              <p>16-10-2016</p>
-                            </td>
-                            <td>
-                              <a href="#">Добавить</a>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td><div class="styled-select">
-                              <select>
-                                <option>Приостановлена</option>
-                                <option>Активна</option>
-                                <option>Завершена</option>
-                              </select>
-                            </div></td>
-                            <td>
-                              <p>16-10-2016</p>
-                            </td>
-                            <td>
-                              <a href="#">Добавить</a>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td><div class="styled-select">
-                              <select>
-                                <option>Приостановлена</option>
-                                <option>Активна</option>
-                                <option>Завершена</option>
-                              </select>
-                            </div></td>
-                            <td>
-                              <p>16-10-2016</p>
-                            </td>
-                            <td>
-                              <a href="#">Добавить</a>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td><div class="styled-select">
-                              <select>
-                                <option>Приостановлена</option>
-                                <option>Активна</option>
-                                <option>Завершена</option>
-                              </select>
-                            </div></td>
-                            <td>
-                              <p>16-10-2016</p>
-                            </td>
-                            <td>
-                              <a href="#">Добавить</a>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td><div class="styled-select">
-                              <select>
-                                <option>Приостановлена</option>
-                                <option>Активна</option>
-                                <option>Завершена</option>
-                              </select>
-                            </div></td>
-                            <td>
-                              <p>16-10-2016</p>
-                            </td>
-                            <td>
-                              <a href="#">Добавить</a>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td><div class="styled-select">
-                              <select>
-                                <option>Приостановлена</option>
-                                <option>Активна</option>
-                                <option>Завершена</option>
-                              </select>
-                            </div></td>
-                            <td>
-                              <p>16-10-2016</p>
-                            </td>
-                            <td>
-                              <a href="#">Добавить</a>
-                            </td>
-                          </tr>
-                          </tbody>
-                        </table>
+                        <div class="uk-panel uk-panel-box uk-margin-bottom">
+                          <div class="uk-panel-badge uk-badge">Новая</div>
+                          <h3 class="uk-panel-title uk-margin-remove">Иван Иванов</h3>
+                          <span class="uk-text-small">18 янв. 2017, 15:48</span>
+                          <p><a href="#">#вх_звонок</a> Заказали 2 упаковки бумаги для УЗИ, выслал счёт на оплату</p>
+                          <span class="uk-text-small">Поликлиника г.Сатпаев / Основной поток</span>
+                        </div>
+
+                        <div class="uk-panel uk-panel-box uk-margin-bottom">
+                          <h3 class="uk-panel-title uk-margin-remove">Имя Фамилия</h3>
+                          <span class="uk-text-small">20 янв. 2017, 18:48</span>
+                          <p><a href="#">#исх_звонок</a> место для оисания действий сотрудника</p>
+                          <span class="uk-text-small">частное лицо г.Алматы / Основной поток</span>
+                        </div>
                       </li>
                       <li>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque commodi consequatur laboriosam maiores molestias officiis quam repellat reprehenderit repudiandae. Ab accusamus aspernatur consequatur, consequuntur corporis dolorum earum esse fugiat fugit illum laborum minima nam nemo officia praesentium, quae recusandae, sunt. Debitis dolorem eveniet libero, molestiae nisi obcaecati quibusdam ullam voluptate.</p>
@@ -405,7 +325,64 @@
                         <p>Сделка 3</p>
                       </li>
                       <li>
-                        <p>Добавить</p>
+                        <div class="uk-form-file">
+                          <form class="uk-form uk-form-stacked">
+                            <div class="uk-form-row">
+                              <label class="uk-form-label" for="form-s-it">Text input</label>
+                              <div class="uk-form-controls">
+                                <input type="text" id="form-s-it" placeholder="Text input">
+                              </div>
+                            </div>
+                            <div class="uk-form-row">
+                              <label class="uk-form-label" for="form-s-ip">Password input</label>
+                              <div class="uk-form-controls">
+                                <input type="password" id="form-s-ip" placeholder="Password input">
+                              </div>
+                            </div>
+
+                            <div class="uk-form-row">
+                              <label class="uk-form-label" for="form-s-s">Select field</label>
+                              <div class="uk-form-controls">
+                                <select id="form-s-s">
+                                  <option>Option 01</option>
+                                  <option>Option 02</option>
+                                </select>
+                              </div>
+                            </div>
+
+                            <div class="uk-form-row">
+                              <label class="uk-form-label" for="form-s-t">Textarea</label>
+                              <div class="uk-form-controls">
+                                <textarea id="form-s-t" cols="30" rows="5" placeholder="Textarea text"></textarea>
+                              </div>
+                            </div>
+                            <div class="uk-form-row">
+                              <span class="uk-form-label">Radio input</span>
+                              <div class="uk-form-controls">
+                                <input type="radio" id="form-s-r" name="radio"> <label for="form-s-r">Radio input</label><br>
+                                <input type="radio" id="form-s-r1" name="radio"> <label for="form-s-r1">1</label>
+                                <label><input type="radio" name="radio"> 2</label>
+                                <label><input type="radio" name="radio"> 3</label>
+                              </div>
+                            </div>
+                            <div class="uk-form-row">
+                              <span class="uk-form-label">Checkbox input</span>
+                              <div class="uk-form-controls">
+                                <input type="checkbox" id="form-s-c"> <label for="form-s-c">Checkbox input</label><br>
+                                <input type="checkbox" id="form-s-c1"> <label for="form-s-c1">1</label>
+                                <label><input type="checkbox"> 2</label>
+                                <label><input type="checkbox"> 3</label>
+                              </div>
+                            </div>
+                            <div class="uk-form-row">
+                              <span class="uk-form-label">Загрузить файл</span>
+                              <input type="file">
+                            </div>
+                            <div class="uk-form-row">
+                              <input class="uk-button uk-button-primary" type="submit" value="Добавить">
+                            </div>
+                          </form>
+                        </div>
                       </li>
                     </ul>
                   </div>
@@ -414,6 +391,42 @@
             </div>
           </div>
           <!--КОНЕЦ виджет сделки -->
+
+          <!--НАЧАЛО 3D воронка -->
+          <div class="grid-item">
+            <div>
+              <div class="grid-item-col uk-text-center">
+                <div class="title-bar">
+                  <h4>Воронка продаж</h4>
+                  <div class="uk-icon-button uk-icon-ellipsis-v" data-uk-dropdown="{mode:'click', pos:'bottom-center'}">
+                    <!-- This is the dropdown -->
+                    <div class="uk-dropdown uk-dropdown-small">
+                      <ul>
+                        <li><a href=""><i class="uk-icon-plus blue"></i> Добавить</a></li>
+                        <li><a href=""><i class="uk-icon-edit"></i> Редактировать</a></li>
+                        <li><a href=""><i class="uk-icon-close red"></i> Удалить</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="funnel-container">
+                  <div id="funnel">
+
+                  </div>
+                  <div class="funnel-legend">
+                    <ul>
+                      <li>A aliquam amet blanditiis doloremque ex illo illum aperiam.</li>
+                      <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam deleniti eaque eos error esse hic iure placeat velit, voluptatem.</li>
+                      <li>Doloribus ea enim eum ex iusto quae quibusdam velit!</li>
+                      <li>Similique sit tenetur voluptatibus? Inventore iure nemo nihil nisi nulla obcaecati odio omnis sequi voluptas voluptate. </li>
+                      <li>Architecto optio rem sit tenetur, velit? Accusantium at atque cum, laborum magni, quasi sapiente, vero voluptatum?</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--КОНЕЦ 3D воронка -->
 
           <!--НАЧАЛО большой виджет РАСШИРЕННАЯ инфо о компании -->
           <div class="grid-item grid-item--large">
@@ -503,6 +516,8 @@
   <script src="js/uikit.min.js"></script>
   <script src="js/packery.pkgd.min.js"></script>
   <script src="js/draggabilly.pkgd.min.js"></script>
+  <script src="js/d3.v4.js"></script>
+  <script src="js/d3-funnel.js"></script>
   <script src="js/scripts.js"></script>
 </body>
 </html>
