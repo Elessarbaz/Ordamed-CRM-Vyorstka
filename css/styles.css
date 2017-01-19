@@ -20,6 +20,46 @@ i.red {
 i.green {
   color: green; }
 
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.styled-select {
+  display: inline-block; }
+  .styled-select select {
+    color: #0073e6;
+    background: transparent;
+    font-size: 16px;
+    line-height: 1;
+    border: 0;
+    border-radius: 0;
+    height: 34px; }
+    .styled-select select:focus {
+      outline-color: #ddd; }
+
+.heading-information + .heading-information {
+  margin-top: 15px; }
+.heading-information p {
+  margin: 0; }
+.heading-information .heading {
+  color: #bdc2c9;
+  font-size: 12px;
+  text-transform: uppercase; }
+.heading-information .information {
+  font-size: 14px; }
+
+/* Scrollbar Stylization */
+.styled-scrollbar::-webkit-scrollbar-track {
+  background-color: #F5F5F5; }
+
+.styled-scrollbar::-webkit-scrollbar {
+  width: 3px;
+  background-color: #F5F5F5; }
+
+.styled-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #cacaca; }
+
 /* -------------------КОНЕЦ----------------
                    Общие стили
 --------------------------------------------*/
@@ -78,8 +118,7 @@ i.green {
 
 .upper-panel {
   padding: 20px;
-  background: #fff;
-  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2); }
+  background: #fff; }
   .upper-panel input[type=search] {
     border-radius: 5px;
     border: 1px #eee solid;
@@ -87,19 +126,6 @@ i.green {
     padding: 0 5px; }
     .upper-panel input[type=search]:focus {
       outline: none; }
-  .upper-panel .styled-select {
-    display: inline-block; }
-    .upper-panel .styled-select select {
-      color: #0073e6;
-      background: transparent;
-      padding: 5px;
-      font-size: 16px;
-      line-height: 1;
-      border: 0;
-      border-radius: 0;
-      height: 34px; }
-      .upper-panel .styled-select select:focus {
-        outline-color: #ddd; }
   .upper-panel .profile-column {
     text-align: right; }
     .upper-panel .profile-column .avatar {
@@ -108,23 +134,20 @@ i.green {
       max-height: 40px; }
 
 .grid-container {
+  overflow: hidden;
   padding: 4px; }
 
-.grid {
-  overflow: hidden;
-  /* clear fix */ }
-  .grid * {
-    box-sizing: border-box; }
-  .grid:after {
-    content: '';
-    display: block;
-    clear: both; }
+.grid:after {
+  content: '';
+  display: block;
+  clear: both; }
 
 .grid-item {
+  width: 50%;
   box-sizing: border-box;
   float: left;
   background-clip: content-box;
-  width: 49.5%; }
+  padding: 8px; }
   .grid-item:hover {
     border-color: rgba(255, 255, 255, 0.5);
     cursor: move; }
@@ -133,9 +156,43 @@ i.green {
   .grid-item > div {
     height: 340px;
     background: white;
-    margin: 8px !important;
-    border-radius: 5px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    display: flex;
+    padding-bottom: 15px; }
+  .grid-item .grid-item-col {
+    flex: 1 1;
+    display: flex;
+    flex-flow: column; }
+  .grid-item .title-bar {
+    background-color: #f3f3f3;
+    position: relative; }
+    .grid-item .title-bar img {
+      height: 30px;
+      width: 30px; }
+    .grid-item .title-bar h4 {
+      margin: 0;
+      padding: 12px 15px; }
+    .grid-item .title-bar .uk-icon-ellipsis-v {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      cursor: pointer; }
+  .grid-item .scrollable-container {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    padding: 15px; }
+    .grid-item .scrollable-container ul li {
+      padding: 5px 0; }
+
+.grid-item.grid-item--large {
+  width: 100%; }
+  .grid-item.grid-item--large > div {
+    height: auto;
+    padding-bottom: 0; }
+
+.grid-sizer {
+  width: 50%; }
 
 .packery-drop-placeholder {
   outline: 2px dashed rgba(0, 0, 0, 0.1);
@@ -143,40 +200,13 @@ i.green {
   -webkit-transition: -webkit-transform 0.2s;
   transition: transform 0.2s; }
 
-.grid-item h4 {
-  color: #555;
-  margin-top: 0; }
-.grid-item hr {
-  margin: 10px -15px; }
-.grid-item p {
-  font-size: 14px;
-  margin: 0; }
-.grid-item [class*=uk-grid] > * {
-  padding: 10px 15px;
-  position: relative; }
-.grid-item .uk-icon-ellipsis-v {
-  position: absolute;
-  right: 5px;
-  top: 5px; }
-.grid-item ul.contacts {
-  list-style: none;
-  padding: 0;
-  margin: 0; }
-  .grid-item ul.contacts li {
-    padding: 5px; }
-    .grid-item ul.contacts li:hover {
-      background-color: #eee; }
-
-.uk-icon-button {
-  cursor: pointer; }
-
 .uk-dropdown {
   margin-top: -20px;
   position: relative;
   background: #fff;
   border: 1px solid #ccc;
   border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.07);
   line-height: 1.2;
   font-family: Arial, sans-serif;
   padding-left: 0;
@@ -201,9 +231,6 @@ i.green {
     border-width: 11px;
     margin-left: -11px; }
   .uk-dropdown ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
     text-align: left; }
     .uk-dropdown ul a {
       color: #333333;
@@ -213,6 +240,17 @@ i.green {
         background-color: #eeeeee; }
       .uk-dropdown ul a i {
         margin-right: 10px; }
+
+.uk-table .styled-select select {
+  height: auto; }
+.uk-table p {
+  margin: 0; }
+.uk-table.staff-activity .avatar {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%; }
+.uk-table.staff-activity td {
+  vertical-align: middle; }
 
 /* -------------------КОНЕЦ------------------
                 Контейнер контента

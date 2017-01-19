@@ -61,61 +61,437 @@
         </div>
       </div>
 
+      <!--НАЧАЛО Контейнер Сетки виджетов-->
       <div class="grid-container">
+        <!--НАЧАЛО сетка виджетов-->
         <div class="grid">
-          <div class="grid-item">
-            <div class="uk-grid uk-grid-collapse uk-grid-divider">
-              <div class="uk-width-medium-1-2">
-                <h4>Контакт в обработке</h4>
-                <div class="uk-icon-button uk-icon-ellipsis-v" data-uk-dropdown="{mode:'click', pos:'bottom-center'}">
 
-                  <!-- This is the dropdown -->
-                  <div class="uk-dropdown uk-dropdown-small">
-                    <ul>
-                      <li><a href=""><i class="uk-icon-plus blue"></i> Добавить</a></li>
-                      <li><a href=""><i class="uk-icon-edit"></i> Редактировать</a></li>
-                      <li><a href=""><i class="uk-icon-close red"></i> Удалить</a></li>
+          <!-- div.grid-sizer - для работы packery.js, не торгать-->
+          <div class="grid-sizer"></div>
+
+          <!--НАЧАЛО виджет контакты-сделки-->
+          <div class="grid-item">
+            <div>
+              <div class="grid-item-col">
+                <div class="title-bar">
+                  <h4>Контакты</h4>
+                  <div class="uk-icon-button uk-icon-ellipsis-v" data-uk-dropdown="{mode:'click', pos:'bottom-center'}">
+                    <!-- This is the dropdown -->
+                    <div class="uk-dropdown uk-dropdown-small">
+                      <ul>
+                        <li><a href=""><i class="uk-icon-plus blue"></i> Добавить</a></li>
+                        <li><a href=""><i class="uk-icon-edit"></i> Редактировать</a></li>
+                        <li><a href=""><i class="uk-icon-close red"></i> Удалить</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="scrollable-container styled-scrollbar">
+                  <div class="scrollable-content">
+                    <h4>Контакты в обработке</h4>
+                    <ul class="contacts">
+                      <li>Ордамед</li>
+                      <li>Лабтроник</li>
+                      <li>Медоника</li>
+                      <li>ОЦА</li>
+                      <li>Сёрдикея</li>
+                    </ul>
+                    <hr>
+                    <h4>Контакты</h4>
+                    <ul class="contacts">
+                      <li>Ордамед</li>
+                      <li>Лабтроник</li>
+                      <li>Медоника</li>
+                      <li>ОЦА</li>
+                      <li>Сёрдикея</li>
                     </ul>
                   </div>
-
-
                 </div>
-                <p>Ордамед</p>
-                <p>+7 701 123 45 67</p>
-                <hr>
-                <h4>Контакты</h4>
-                <ul class="contacts">
-                  <li>Ордамед <i class="uk-icon-check-circle-o green uk-float-right"></i></li>
-                  <li>Лабтроник</li>
-                  <li>Медоника</li>
-                  <li>ОЦА</li>
-                  <li>Сёрдикея</li>
+              </div>
+              <div class="grid-item-col">
+                <div class="title-bar">
+                  <h4>Сделки</h4>
+                  <div class="uk-icon-button uk-icon-ellipsis-v" data-uk-dropdown="{mode:'click', pos:'bottom-center'}">
+                    <!-- This is the dropdown -->
+                    <div class="uk-dropdown uk-dropdown-small">
+                      <ul>
+                        <li><a href=""><i class="uk-icon-plus blue"></i> Добавить</a></li>
+                        <li><a href=""><i class="uk-icon-edit"></i> Редактировать</a></li>
+                        <li><a href=""><i class="uk-icon-close red"></i> Удалить</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="scrollable-container">
+                  <ul>
+                    <li>Сделка 1</li>
+                    <li>Сделка 2</li>
+                    <li>Сделка 3</li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!--КОНЕЦ виджет контакты-сделки-->
+
+          <!--НАЧАЛО активность сотрудников-->
+          <div class="grid-item">
+            <div>
+              <div class="grid-item-col">
+                <div class="title-bar">
+                  <h4>Активность сотрудников</h4>
+                  <div class="uk-icon-button uk-icon-ellipsis-v" data-uk-dropdown="{mode:'click', pos:'bottom-center'}">
+                    <!-- This is the dropdown -->
+                    <div class="uk-dropdown uk-dropdown-small">
+                      <ul>
+                        <li><a href=""><i class="uk-icon-plus blue"></i> Добавить</a></li>
+                        <li><a href=""><i class="uk-icon-edit"></i> Редактировать</a></li>
+                        <li><a href=""><i class="uk-icon-close red"></i> Удалить</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="scrollable-container styled-scrollbar">
+                  <div class="scrollable-content">
+                    <table class="uk-table uk-table-striped staff-activity">
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img class="avatar" src="images/avatar.jpg" alt="Аватар">
+                          </td>
+                          <td>
+                            <p>Дмитрий Маликов</p>
+                          </td>
+                          <td>
+                            <p>16-10-2016</p>
+                          </td>
+                          <td>
+                            <p>Ордамед</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <img class="avatar" src="images/avatar.jpg" alt="Аватар">
+                          </td>
+                          <td>
+                            <p>Дмитрий Маликов</p>
+                          </td>
+                          <td>
+                            <p>16-10-2016</p>
+                          </td>
+                          <td>
+                            <p>Ордамед</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <img class="avatar" src="images/avatar.jpg" alt="Аватар">
+                          </td>
+                          <td>
+                            <p>Дмитрий Маликов</p>
+                          </td>
+                          <td>
+                            <p>16-10-2016</p>
+                          </td>
+                          <td>
+                            <p>Ордамед</p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--КОНЕЦ активность сотрудников-->
+
+          <!--НАЧАЛО виджет контакты-искать-в -->
+          <div class="grid-item">
+            <div>
+              <div class="grid-item-col">
+                <div class="title-bar">
+                  <h4>Контакты</h4>
+                  <div class="uk-icon-button uk-icon-ellipsis-v" data-uk-dropdown="{mode:'click', pos:'bottom-center'}">
+                    <!-- This is the dropdown -->
+                    <div class="uk-dropdown uk-dropdown-small">
+                      <ul>
+                        <li><a href=""><i class="uk-icon-plus blue"></i> Добавить</a></li>
+                        <li><a href=""><i class="uk-icon-edit"></i> Редактировать</a></li>
+                        <li><a href=""><i class="uk-icon-close red"></i> Удалить</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="scrollable-container styled-scrollbar">
+                  <div class="scrollable-content">
+                    <h4>Контакты</h4>
+                    <ul class="contacts">
+                      <li>Ордамед</li>
+                      <li>Лабтроник</li>
+                      <li>Медоника</li>
+                      <li>ОЦА</li>
+                      <li>Сёрдикея</li>
+                    </ul>
+                    <hr>
+                    <h4>Контакты</h4>
+                    <ul class="contacts">
+                      <li>Ордамед</li>
+                      <li>Лабтроник</li>
+                      <li>Медоника</li>
+                      <li>ОЦА</li>
+                      <li>Сёрдикея</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item-col">
+                <div class="title-bar">
+                  <h4>Искать только в:</h4>
+                  <div class="uk-icon-button uk-icon-ellipsis-v" data-uk-dropdown="{mode:'click', pos:'bottom-center'}">
+                    <!-- This is the dropdown -->
+                    <div class="uk-dropdown uk-dropdown-small">
+                      <ul>
+                        <li><a href=""><i class="uk-icon-plus blue"></i> Добавить</a></li>
+                        <li><a href=""><i class="uk-icon-edit"></i> Редактировать</a></li>
+                        <li><a href=""><i class="uk-icon-close red"></i> Удалить</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="scrollable-container">
+                  <form>
+                    <input type="radio" name="gender" value="male" id="cold_base"><label for="cold_base">Холодной базе</label><br>
+                    <input type="radio" name="gender" value="female" id="leads"><label for="leads">Лидов</label><br>
+                    <input type="radio" name="gender" value="other" id="ready_to_buy"><label for="ready_to_buy">Готовых купить</label><br>
+                    <input type="radio" name="gender" value="other" id="physical"><label for="physical">Физических лиц</label><br>
+                    <input type="radio" name="gender" value="other" id="juridical"><label for="juridical">Юридических лиц</label>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--КОНЕЦ виджет контакты-искать-в -->
+
+          <!--НАЧАЛО виджет сделки -->
+          <div class="grid-item">
+            <div>
+              <div class="grid-item-col">
+                <div class="title-bar">
+                  <h4>Сделки</h4>
+                  <div class="uk-icon-button uk-icon-ellipsis-v" data-uk-dropdown="{mode:'click', pos:'bottom-center'}">
+                    <!-- This is the dropdown -->
+                    <div class="uk-dropdown uk-dropdown-small">
+                      <ul>
+                        <li><a href=""><i class="uk-icon-plus blue"></i> Добавить</a></li>
+                        <li><a href=""><i class="uk-icon-edit"></i> Редактировать</a></li>
+                        <li><a href=""><i class="uk-icon-close red"></i> Удалить</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- НАЧАЛО switcher-->
+                <ul class="uk-subnav uk-subnav-pill uk-margin-remove" data-uk-switcher="{connect:'#deals-switcher', animation: 'scale'}">
+                  <li class="uk-active" aria-expanded="true"><a href="">Сделка 1</a></li>
+                  <li aria-expanded="false" class=""><a href="">Сделка 2</a></li>
+                  <li aria-expanded="false" class=""><a href="">Сделка 3</a></li>
+                  <li aria-expanded="false" class=""><a href="">Добавить</a></li>
                 </ul>
+                <!-- КОНЕЦ switcher-->
+                <div class="scrollable-container styled-scrollbar">
+                  <div class="scrollable-content">
+                    <ul id="deals-switcher" class="uk-switcher">
+                      <li>
+                        <table class="uk-table uk-table-striped">
+                          <tbody>
+                          <tr>
+                            <td><div class="styled-select">
+                              <select>
+                                <option>Приостановлена</option>
+                                <option>Активна</option>
+                                <option>Завершена</option>
+                              </select>
+                            </div></td>
+                            <td>
+                              <p>16-10-2016</p>
+                            </td>
+                            <td>
+                              <a href="#">Добавить</a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><div class="styled-select">
+                              <select>
+                                <option>Приостановлена</option>
+                                <option>Активна</option>
+                                <option>Завершена</option>
+                              </select>
+                            </div></td>
+                            <td>
+                              <p>16-10-2016</p>
+                            </td>
+                            <td>
+                              <a href="#">Добавить</a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><div class="styled-select">
+                              <select>
+                                <option>Приостановлена</option>
+                                <option>Активна</option>
+                                <option>Завершена</option>
+                              </select>
+                            </div></td>
+                            <td>
+                              <p>16-10-2016</p>
+                            </td>
+                            <td>
+                              <a href="#">Добавить</a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><div class="styled-select">
+                              <select>
+                                <option>Приостановлена</option>
+                                <option>Активна</option>
+                                <option>Завершена</option>
+                              </select>
+                            </div></td>
+                            <td>
+                              <p>16-10-2016</p>
+                            </td>
+                            <td>
+                              <a href="#">Добавить</a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><div class="styled-select">
+                              <select>
+                                <option>Приостановлена</option>
+                                <option>Активна</option>
+                                <option>Завершена</option>
+                              </select>
+                            </div></td>
+                            <td>
+                              <p>16-10-2016</p>
+                            </td>
+                            <td>
+                              <a href="#">Добавить</a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><div class="styled-select">
+                              <select>
+                                <option>Приостановлена</option>
+                                <option>Активна</option>
+                                <option>Завершена</option>
+                              </select>
+                            </div></td>
+                            <td>
+                              <p>16-10-2016</p>
+                            </td>
+                            <td>
+                              <a href="#">Добавить</a>
+                            </td>
+                          </tr>
+                          </tbody>
+                        </table>
+                      </li>
+                      <li>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque commodi consequatur laboriosam maiores molestias officiis quam repellat reprehenderit repudiandae. Ab accusamus aspernatur consequatur, consequuntur corporis dolorum earum esse fugiat fugit illum laborum minima nam nemo officia praesentium, quae recusandae, sunt. Debitis dolorem eveniet libero, molestiae nisi obcaecati quibusdam ullam voluptate.</p>
+                      </li>
+                      <li>
+                        <p>Сделка 3</p>
+                      </li>
+                      <li>
+                        <p>Добавить</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-              <div class="uk-width-medium-1-2">
-                <h4>Сделки</h4>
-                <a href="" class="uk-icon-button uk-icon-ellipsis-v"></a>
+            </div>
+          </div>
+          <!--КОНЕЦ виджет сделки -->
 
+          <!--НАЧАЛО большой виджет РАСШИРЕННАЯ инфо о компании -->
+          <div class="grid-item grid-item--large">
+            <div>
+              <div class="grid-item-col">
+                <div class="title-bar">
+                  <h4><img src="images/ordamed_logo.png" alt="Ордамед лого"> Ордамед</h4>
+                  <div class="uk-icon-button uk-icon-ellipsis-v" data-uk-dropdown="{mode:'click', pos:'bottom-center'}">
+                    <!-- This is the dropdown -->
+                    <div class="uk-dropdown uk-dropdown-small">
+                      <ul>
+                        <li><a href=""><i class="uk-icon-plus blue"></i> Добавить</a></li>
+                        <li><a href=""><i class="uk-icon-edit"></i> Редактировать</a></li>
+                        <li><a href=""><i class="uk-icon-close red"></i> Удалить</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="scrollable-container styled-scrollbar">
+                  <div class="scrollable-content uk-grid">
+                    <div class="uk-width-medium-1-3">
+                      <div class="heading-information">
+                        <p class="heading">Полное наименование</p>
+                        <p class="information">ТОО "ОРДАМЕД"</p>
+                      </div>
+                      <div class="heading-information">
+                        <p class="heading">Деятельность</p>
+                        <p class="information">Частный мед.центр</p>
+                      </div>
+                      <div class="heading-information">
+                        <p class="heading">АДРЕС ЮРИДИЧЕСКИЙ / ФАКТИЧЕСКИЙ</p>
+                        <p class="information">д. 25, помещение 202, ул.Дуйсенова, Алматы 050009, Казахстан</p>
+                      </div>
+                      <div class="heading-information">
+                        <p class="heading">ТЕЛЕФОНЫ</p>
+                        <p class="information">+7 800 080-70-72, +7 800 080-70-72</p>
+                      </div>
+                      <div class="heading-information">
+                        <p class="heading">EMAIL</p>
+                        <p class="information">info@ordamed.kz</p>
+                      </div>
+                      <div class="heading-information">
+                        <p class="heading">SITE</p>
+                        <p class="information">www.ordamed.kz</p>
+                      </div>
+                    </div>
+                    <div class="uk-width-medium-1-3">
+                      <div class="heading-information">
+                        <p class="heading">БАНКОВСКИЕ РЕКВИЗИТЫ</p>
+                        <p class="information">IBAN 230948502849829 <br>
+                          SWIFT: KZBANK<br>
+                          д. 25, помещение 202, ул.Дуйсенова, Алматы 050009, Казахстан</p>
+                      </div>
+                    </div>
+                    <div class="uk-width-medium-1-3">
+                      <div class="heading-information">
+                        <p class="heading">СПИСОК ДОГОВОРОВ</p>
+                        <p class="information">1. Договор первый <br>
+                          2. Договор второй</p>
+                      </div>
+                      <div class="heading-information">
+                        <p class="heading">КОНТАКТНОЕ ЛИЦО</p>
+                        <p class="information">Иванов И.П. - руководитель <br>
+                          Петров А.Е. - зам. директора</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="grid-item">
-            <div>
+          <!--КОНЕЦ большой виджет РАСШИРЕННАЯ инфо о компании -->
 
-            </div>
-          </div>
-          <div class="grid-item">
-            <div>
-
-            </div>
-          </div>
-          <div class="grid-item">
-            <div>
-
-            </div>
-          </div>
         </div>
+        <!--КОНЕЦ сетка виджетов-->
       </div>
+      <!--КОНЕЦ Контейнер Сетки виджетов-->
+
     </div>
     <!-- КОНЕЦ Контейнер контента -->
 
@@ -127,22 +503,6 @@
   <script src="js/uikit.min.js"></script>
   <script src="js/packery.pkgd.min.js"></script>
   <script src="js/draggabilly.pkgd.min.js"></script>
-  <script>
-    $( window ).on( "load", function() {
-      // external js: packery.pkgd.js, draggabilly.pkgd.js
-
-      var $grid = $('.grid').packery({
-        itemSelector: '.grid-item'
-      });
-
-// make all grid-items draggable
-      $grid.find('.grid-item').each( function( i, gridItem ) {
-        var draggie = new Draggabilly( gridItem );
-        // bind drag events to Packery
-        $grid.packery( 'bindDraggabillyEvents', draggie );
-      });
-
-    });
-  </script>
+  <script src="js/scripts.js"></script>
 </body>
 </html>
