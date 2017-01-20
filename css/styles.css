@@ -283,7 +283,8 @@ ul {
   .funnel-container > div {
     flex: 1 1 200px; }
   .funnel-container .funnel-legend {
-    margin-left: 10px; }
+    margin-left: 10px;
+    overflow-y: auto; }
     .funnel-container .funnel-legend ul li {
       padding-left: 5px;
       border-left: 4px solid #39f; }
